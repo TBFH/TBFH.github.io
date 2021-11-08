@@ -4,28 +4,14 @@
     <meta charset="utf-8">
     <script src="js/aframe.min.js"></script>
     <script src="js/gltf-model-legacy.js"></script>
-	<style>
-		* { background: gray; }
-		a-scene {
-			width: 600px; height: 600px;
-		}
-	</style>
 </head>
 
 <body>
 <a-scene>
     <a-assets>
-        <a-asset-item id="obj1" src="model/cdesk01su.glb"></a-asset-item>
-		<a-asset-item id="obj2" src="model/cdesk04su.glb"></a-asset-item>
-		<a-asset-item id="obj3" src="model/new.glb"></a-asset-item>
-		<a-asset-item id="obj4" src="model/chair.glb"></a-asset-item>
-		<a-asset-item id="obj5" src="model/bottle.glb"></a-asset-item>
+        <a-asset-item id="obj1" src="model/new1.glb"></a-asset-item>
     </a-assets>
-    <a-entity gltf-model="#obj1" position="1 1.4 -1" scale="1 1 1" rotation="0 0 0"></a-entity>
-	<a-entity gltf-model="#obj2" position="0.2 1.4 -1" scale="0.3 0.3 0.3" rotation="0 0 0"></a-entity>
-	<a-entity gltf-model="#obj3" position="0.15 1.19 -0.9" scale="0.08 0.08 0.08" rotation="0 45 0"></a-entity>
-	<a-entity gltf-model="#obj4" position="1 1.3 -0.3" scale="0.0007 0.0007 0.0007" rotation="0 -75 0"></a-entity>
-	<a-entity gltf-model="#obj5" position="0.35 1.1 -0.5" scale="0.008 0.008 0.008" rotation="0 270 0"></a-entity>
+    <a-entity gltf-model="#obj1" position="1 1 -1" scale="1 1 1" rotation="0 0 0"></a-entity>
     <a-sky>color="#FFFAFA"</a-sky>
 </a-scene>
 </body>
