@@ -1,48 +1,32 @@
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>3D模型实时观看</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				font-family: Monospace;
-				background-color: #fff;
-				color: black;
-				margin: 0px;
-				overflow: hidden;
-			}
+<head>
+    <meta charset="utf-8">
+    <script src="js/aframe.min.js"></script>
+    <script src="js/gltf-model-legacy.js"></script>
+	<style>
+		* { background: gray; }
+		a-scene {
+			width: 600px; height: 600px;
+		}
+	</style>
+</head>
 
-			#modelBorderContainer{
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				position: absolute;
-				width: 50%;
-				height: 50%;
-			}
-			#modelBorder {
-				max-width: 512px;
-				width: 100%;
-				height: 50%;
-			}
-			canvas{
-				position: absolute;
-				top: 0%;
-				left: 0%;
-			}
-		</style>
-	</head>
-
-
-	<body>
-		<script type="application/javascript">
-			var modelUrl = 'model/new1.glb'     //定义所使用模型路径
-		</script>
-		<script src="js/three.min.js?v=2.0.3"></script>
-		<script src="js/OrbitControls.js?v=2.0.3"></script>
-		<script src="js/GLTFLoader.js?v=2.0.3"></script>
-		<script src="js/WebGL.js?v=2.0.3"></script>
-		<script src="js/stats.min.js?v=2.0.3"></script>
-		<script src="js/3dmodel.js?v=2.0.3"></script>
-	</body>
+<body>
+<a-scene>
+    <a-assets>
+        <a-asset-item id="obj1" src="model/cdesk01su.glb"></a-asset-item>
+		<a-asset-item id="obj2" src="model/cdesk04su.glb"></a-asset-item>
+		<a-asset-item id="obj3" src="model/new.glb"></a-asset-item>
+		<a-asset-item id="obj4" src="model/chair.glb"></a-asset-item>
+		<a-asset-item id="obj5" src="model/bottle.glb"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#obj1" position="1 1.4 -1" scale="1 1 1" rotation="0 0 0"></a-entity>
+	<a-entity gltf-model="#obj2" position="0.2 1.4 -1" scale="0.3 0.3 0.3" rotation="0 0 0"></a-entity>
+	<a-entity gltf-model="#obj3" position="0.15 1.19 -0.9" scale="0.08 0.08 0.08" rotation="0 45 0"></a-entity>
+	<a-entity gltf-model="#obj4" position="1 1.3 -0.3" scale="0.0007 0.0007 0.0007" rotation="0 -75 0"></a-entity>
+	<a-entity gltf-model="#obj5" position="0.35 1.1 -0.5" scale="0.008 0.008 0.008" rotation="0 270 0"></a-entity>
+    <a-sky>color="#FFFAFA"</a-sky>
+</a-scene>
+</body>
 </html>
